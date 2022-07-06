@@ -17,11 +17,12 @@ import FlagIcon from '@mui/icons-material/Flag';
 import HelpIcon from '@mui/icons-material/Help';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import { Link } from 'react-router-dom';
 
 const Container = styled.div`
     flex:1;
-    background-color: ${({theme}) => theme.bg};
-    height: 100%;
+    background-color: ${({theme}) => theme.bgLighter};
+    height: 100vh;
     color: ${({theme}) => theme.text};
     font-size: 14px;
     position: sticky;
@@ -76,10 +77,12 @@ const Menu = ({darkMode, setDarkMode}) => {
   return (
     <Container>
         <Wrapper>
-            <Logo>
-                <Img src={playButton} />
-                MeTube
-            </Logo>
+            <Link to="/" style={{textDecoration:"none", color:"inherit"}}>
+                <Logo>
+                    <Img src={playButton} />
+                    MeTube
+                </Logo>
+            </Link>
             <Item>
                 <HomeIcon />
                 Home
