@@ -47,6 +47,10 @@ const Item = styled.div`
     gap: 20px;
     cursor: pointer;
     padding: 7.5px 0px;
+
+    &:hover {
+        background-color: ${({theme}) => theme.soft};
+    }
 `;
 const Hr = styled.hr`
     margin: 15px 0px;
@@ -83,10 +87,12 @@ const Menu = ({darkMode, setDarkMode}) => {
                     MeTube
                 </Logo>
             </Link>
+            <Link to="/" style={{textDecoration:"none", color:"inherit"}}>
             <Item>
                 <HomeIcon />
                 Home
             </Item>
+            </Link>
             <Item>
                 <ExploreIcon />
                 Explore
@@ -107,10 +113,12 @@ const Menu = ({darkMode, setDarkMode}) => {
             <Hr />
             <Login>
                 Sign in to like videos, comment, and subscribe.
-                <Button>
-                    <AccountCircleIcon />
-                    SIGN IN
-                </Button>
+                <Link to="signin" style={{textDecoration:"none"}}>
+                    <Button>
+                        <AccountCircleIcon />
+                        SIGN IN
+                    </Button>
+                </Link>
             </Login>
             <Hr />
             <Title>
