@@ -5,6 +5,8 @@ import ThumbDownOffAltIcon from '@mui/icons-material/ThumbDownOffAlt';
 import ReplyOutlinedIcon from '@mui/icons-material/ReplyOutlined';
 import AddTaskOutlinedIcon from '@mui/icons-material/AddTaskOutlined';
 import logo from '../img/videoPlayerButton.jpg';
+import Comments from '../components/Comments';
+import Card from '../components/Card';
 
 const Container = styled.div`
   display: flex;
@@ -110,7 +112,7 @@ const Video = () => {
     <Container>
       <Content>
         <VideoWrapper>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/kKn6H7A0Uvg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="100%" height="720" src="https://www.youtube.com/embed/kKn6H7A0Uvg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </VideoWrapper>
         <Title>test video</Title>
         <Details>
@@ -134,8 +136,20 @@ const Video = () => {
           </ChannelInfo>
           <Subscribe>SUBSCRIBE</Subscribe>
         </Channel>
+        <Hr/>
+        <Comments/>
       </Content>
-      <Recommendations>recommendations</Recommendations>
+      <Recommendations>
+        <Card type="sm" />
+        <Card type="sm" />
+        <Card type="sm" />
+        <Card type="sm" />
+        <Card type="sm" />
+        <Card type="sm" />
+        <Card type="sm" />
+        <Card type="sm" />
+        <Card type="sm" />
+      </Recommendations>
     </Container>
   )
 }
